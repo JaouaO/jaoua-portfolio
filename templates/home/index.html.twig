@@ -1,20 +1,79 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}
+    Jaoua Ollivier — Développeur Web & Applications
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <section>
+        <h1>Jaoua Ollivier</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/chaou/dev/jaoua-portfolio/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/Users/chaou/dev/jaoua-portfolio/templates/home/index.html.twig</code></li>
-    </ul>
-</div>
+        <h2>Développeur Web & Applications</h2>
+
+        <p>
+            Titulaire du titre Développeur Web et Web Mobile,
+            je prépare actuellement le titre de Concepteur Développeur d’Applications
+            et recherche une alternance à Nantes et ses environs.
+        </p>
+
+        <p>
+            PHP · Symfony · Java · Spring Boot · JavaScript · SQL
+        </p>
+
+        <a href="#projects">Découvrir mes projets</a>
+        <a href="https://github.com/JaouaO" target="_blank">GitHub</a>
+    </section>
+
+    <section id="projects">
+        <h2>Projets sélectionnés</h2>
+
+        <article>
+            <h3>Application de gestion d’interventions</h3>
+            <p>Projet réalisé lors de mon stage chez Maintronic.</p>
+            <p>PHP · JavaScript · SQL</p>
+        </article>
+
+        <article>
+            <h3>Application de ventes aux enchères</h3>
+            <p>Application développée avec Spring Boot et Thymeleaf.</p>
+            <p>Java · Spring Boot · SQL</p>
+        </article>
+
+        <article>
+            <h3>Application de gestion d’événements</h3>
+            <p>Application web développée avec Symfony.</p>
+            <p>PHP · Symfony · SQL</p>
+        </article>
+    </section>
+
+    <section id="skills">
+        <h2>Compétences</h2>
+
+        <p>
+            PHP, Symfony, Java, Spring Boot, JavaScript,
+            Angular, SQL, MySQL, MongoDB, Git et Docker.
+        </p>
+    </section>
+
+    <section id="experience">
+        <h2>Expérience</h2>
+
+        <h3>Développeur informatique — Maintronic</h3>
+
+        <p>
+            Conception et développement d’une application de gestion
+            des interventions de maintenance informatique.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <p>
+            Vous pouvez me contacter pour discuter d’une opportunité
+            d’alternance en développement.
+        </p>
+    </section>
+
 {% endblock %}
