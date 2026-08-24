@@ -7,32 +7,42 @@
     <title>{% block title %}Jaoua Ollivier — Développeur Web & Applications{% endblock %}</title>
 
     {% block stylesheets %}
+        {{ importmap('app') }}
     {% endblock %}
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <a href="{{ path('app_home') }}">
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="#hero" class="logo">
             Jaoua Ollivier
         </a>
 
-        <ul>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#experience">Expérience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <nav class="main-nav" aria-label="Navigation principale">
+            <a href="#projects">Projets</a>
+            <a href="#about">À propos</a>
+            <a href="#skills">Compétences</a>
+            <a href="#experience">Expérience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
 </header>
 
 <main>
     {% block body %}{% endblock %}
 </main>
 
-<footer>
-    <p>© {{ "now"|date("Y") }} Jaoua Ollivier</p>
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© {{ "now"|date("Y") }} Jaoua Ollivier</p>
+
+        <a href="#hero">
+            Retour en haut ↑
+        </a>
+    </div>
 </footer>
 
 </body>
