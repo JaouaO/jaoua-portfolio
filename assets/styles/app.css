@@ -568,6 +568,17 @@ h3 {
     transform: translateY(0);
 }
 
+.project-card-game {
+    border-color: #b9cbe0;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
 
 /* RESPONSIVE */
 
