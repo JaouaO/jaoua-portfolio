@@ -1,0 +1,416 @@
+<article class="project-card project-card-detailed">
+    <div class="project-number">02</div>
+
+    <div class="project-content">
+        <p class="project-type">
+            Projet Symfony
+        </p>
+
+        <h3>Sortir</h3>
+
+        <p class="project-lead">
+            Application web permettant d'organiser et de gérer
+            des sorties entre utilisateurs.
+        </p>
+
+        <p>
+            Ce projet m'a permis de travailler la modélisation métier
+            avec Doctrine, les relations entre entités, les formulaires,
+            les repositories et la structuration d'une application Symfony.
+        </p>
+
+        <ul class="tags">
+            <li>PHP</li>
+            <li>Symfony</li>
+            <li>Doctrine</li>
+            <li>Twig</li>
+            <li>SQL</li>
+        </ul>
+
+        <div class="project-carousel" data-carousel>
+
+            <div class="project-carousel-track">
+
+                {# Slide 1 — Architecture #}
+                <div class="project-slide is-active">
+                    <div class="architecture-slide">
+
+                        <div class="carousel-slide-heading">
+                            <span>01</span>
+                            <div>
+                                <strong>Architecture Symfony</strong>
+                                <small>Organisation du projet</small>
+                            </div>
+                        </div>
+
+                        <div class="architecture-grid">
+
+                            <div class="architecture-block architecture-block-main">
+                                <span class="architecture-count">8</span>
+                                <strong>Controllers</strong>
+                                <small>
+                                    Event, User, Group, Admin,
+                                    Manager…
+                                </small>
+                            </div>
+
+                            <div class="architecture-block architecture-block-main">
+                                <span class="architecture-count">9</span>
+                                <strong>Entities</strong>
+                                <small>
+                                    Event, User, Place,
+                                    City, Site…
+                                </small>
+                            </div>
+
+                            <div class="architecture-block">
+                                <span class="architecture-count">7</span>
+                                <strong>Forms</strong>
+                                <small>
+                                    Création, inscription,
+                                    groupes…
+                                </small>
+                            </div>
+
+                            <div class="architecture-block">
+                                <span class="architecture-count">9</span>
+                                <strong>Repositories</strong>
+                                <small>
+                                    Accès et requêtes
+                                    métier
+                                </small>
+                            </div>
+
+                            <div class="architecture-block">
+                                <span class="architecture-count">1</span>
+                                <strong>Service</strong>
+                                <small>EventService</small>
+                            </div>
+
+                            <div class="architecture-block">
+                                <span class="architecture-count">2</span>
+                                <strong>Security</strong>
+                                <small>
+                                    Vérification e-mail
+                                    et utilisateurs
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <div class="architecture-flow">
+                            <span>Controller</span>
+                            <i>→</i>
+                            <span>Service</span>
+                            <i>→</i>
+                            <span>Repository</span>
+                            <i>→</i>
+                            <span>Entity</span>
+                            <i>→</i>
+                            <span>Twig</span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                {# Slide 2 — Fonctionnement métier #}
+                <div class="project-slide">
+                    <div class="workflow-slide">
+
+                        <div class="carousel-slide-heading">
+                            <span>02</span>
+                            <div>
+                                <strong>Fonctionnement métier</strong>
+                                <small>Cycle d'une sortie</small>
+                            </div>
+                        </div>
+
+                        <div class="workflow">
+
+                            <div class="workflow-step">
+                                <span class="workflow-icon">01</span>
+                                <strong>Utilisateur</strong>
+                                <small>se connecte</small>
+                            </div>
+
+                            <div class="workflow-arrow">→</div>
+
+                            <div class="workflow-step">
+                                <span class="workflow-icon">02</span>
+                                <strong>Sortie</strong>
+                                <small>crée ou rejoint</small>
+                            </div>
+
+                            <div class="workflow-arrow">→</div>
+
+                            <div class="workflow-step">
+                                <span class="workflow-icon">03</span>
+                                <strong>Lieu</strong>
+                                <small>ville & adresse</small>
+                            </div>
+
+                            <div class="workflow-arrow">→</div>
+
+                            <div class="workflow-step">
+                                <span class="workflow-icon">04</span>
+                                <strong>État</strong>
+                                <small>cycle de vie</small>
+                            </div>
+
+                        </div>
+
+                        <div class="workflow-secondary">
+
+                            <div>
+                                <strong>Participants</strong>
+                                <span>ManyToMany User ↔ Event</span>
+                            </div>
+
+                            <div>
+                                <strong>Groupes privés</strong>
+                                <span>accès restreint à certaines sorties</span>
+                            </div>
+
+                            <div>
+                                <strong>Notifications</strong>
+                                <span>ScheduledEmail + MessageHandler</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                {# Slide 3 — Modèle Doctrine #}
+                <div class="project-slide">
+                    <div class="schema-slide">
+
+                        <div class="carousel-slide-heading">
+                            <span>03</span>
+
+                            <div>
+                                <strong>Modèle de données</strong>
+                                <small>Relations Doctrine principales</small>
+                            </div>
+                        </div>
+
+                        <div class="doctrine-compact-schema">
+
+                            <div class="doctrine-card doctrine-user-participant">
+                                <strong>User</strong>
+                                <span>Participants</span>
+
+                                <small>ManyToMany</small>
+                            </div>
+
+                            <div class="doctrine-card doctrine-place">
+                                <strong>Place</strong>
+                                <span>Lieu</span>
+
+                                <small>ManyToOne</small>
+                            </div>
+
+                            <div class="doctrine-card doctrine-state">
+                                <strong>State</strong>
+                                <span>État</span>
+
+                                <small>ManyToOne</small>
+                            </div>
+
+                            <div class="doctrine-card doctrine-event">
+                                <strong>Event</strong>
+                                <span>Entité centrale</span>
+                            </div>
+
+                            <div class="doctrine-card doctrine-site">
+                                <strong>Site</strong>
+                                <span>Rattachement</span>
+
+                                <small>ManyToOne</small>
+                            </div>
+
+                            <div class="doctrine-card doctrine-group">
+                                <strong>Group</strong>
+                                <span>Groupe privé</span>
+
+                                <small>ManyToOne</small>
+                            </div>
+
+                            <div class="doctrine-card doctrine-organizer">
+                                <strong>User</strong>
+                                <span>Organisateur</span>
+
+                                <small>ManyToOne</small>
+                            </div>
+
+                            <div class="doctrine-card doctrine-email">
+                                <strong>ScheduledEmail</strong>
+                                <span>Notifications</span>
+
+                                <small>OneToMany</small>
+                            </div>
+
+                            <svg
+                                class="doctrine-links"
+                                viewBox="0 0 1000 400"
+                                preserveAspectRatio="none"
+                                aria-hidden="true"
+                            >
+                                <defs>
+                                    <marker
+                                        id="doctrine-arrow"
+                                        markerWidth="8"
+                                        markerHeight="8"
+                                        refX="7"
+                                        refY="4"
+                                        orient="auto"
+                                    >
+                                        <path d="M0,0 L8,4 L0,8 Z"></path>
+                                    </marker>
+
+                                    <marker
+                                        id="doctrine-arrow-start"
+                                        markerWidth="8"
+                                        markerHeight="8"
+                                        refX="1"
+                                        refY="4"
+                                        orient="auto"
+                                    >
+                                        <path d="M8,0 L0,4 L8,8 Z"></path>
+                                    </marker>
+                                </defs>
+
+                                {# Participants <-> Event #}
+                                <line
+                                    x1="250"
+                                    y1="80"
+                                    x2="430"
+                                    y2="180"
+                                    class="doctrine-link doctrine-link-double"
+                                />
+
+                                {# Place -> Event #}
+                                <line x1="250" y1="200" x2="430" y2="200" class="doctrine-link" />
+
+                                {# State -> Event #}
+                                <line x1="250" y1="315" x2="430" y2="230" class="doctrine-link" />
+
+                                {# Organizer -> Event #}
+                                <line x1="750" y1="80" x2="570" y2="180" class="doctrine-link" />
+
+                                {# Site -> Event #}
+                                <line x1="750" y1="200" x2="570" y2="200" class="doctrine-link" />
+
+                                {# Group -> Event #}
+                                <line x1="750" y1="315" x2="570" y2="230" class="doctrine-link" />
+
+                                {# Event -> ScheduledEmail #}
+                                <line x1="500" y1="245" x2="500" y2="330" class="doctrine-link" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                {# Slide 4 — Code #}
+                <div class="project-slide">
+                    <div class="code-slide">
+
+                        <div class="carousel-slide-heading carousel-slide-heading-dark">
+                            <span>04</span>
+                            <div>
+                                <strong>Extrait Doctrine</strong>
+                                <small>Event.php</small>
+                            </div>
+                        </div>
+
+                        <div class="project-code">
+<pre><code>#[ORM\ManyToMany(
+    targetEntity: User::class,
+    mappedBy: 'registeredEvents'
+)]
+private Collection $registeredParticipants;
+
+#[ORM\ManyToOne(
+    inversedBy: 'organizedEvents'
+)]
+#[ORM\JoinColumn(
+    nullable: false,
+    onDelete: "CASCADE"
+)]
+private ?User $organizer = null;</code></pre>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="project-carousel-controls">
+
+                <button
+                    type="button"
+                    data-carousel-prev
+                    aria-label="Slide précédente"
+                >
+                    ←
+                </button>
+
+                <div class="project-carousel-dots">
+                    <button
+                        type="button"
+                        class="is-active"
+                        data-carousel-dot="0"
+                        aria-label="Architecture"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-carousel-dot="1"
+                        aria-label="Fonctionnement"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-carousel-dot="2"
+                        aria-label="Modèle de données"
+                    ></button>
+
+                    <button
+                        type="button"
+                        data-carousel-dot="3"
+                        aria-label="Code"
+                    ></button>
+                </div>
+
+                <button
+                    type="button"
+                    data-carousel-next
+                    aria-label="Slide suivante"
+                >
+                    →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-actions">
+            <a
+                href="https://github.com/JaouaO/sortir-symfony"
+                target="_blank"
+                rel="noopener"
+                class="button button-secondary"
+            >
+                Voir le code sur GitHub
+            </a>
+        </div>
+
+    </div>
+</article>

@@ -578,6 +578,824 @@ h3 {
     gap: 12px;
     margin-top: 24px;
 }
+/* ========================================
+   PROJECT CAROUSEL
+======================================== */
+
+.project-card-detailed .project-content {
+    max-width: 900px;
+}
+
+.project-carousel {
+    margin-top: 32px;
+}
+
+.project-carousel-track {
+    position: relative;
+
+    width: 100%;
+    height: 410px;
+
+    overflow: hidden;
+
+    background: var(--surface-alt);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+
+/* Une seule slide visible à la fois */
+
+.project-slide {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+}
+
+.project-slide.is-active {
+    display: block;
+}
+
+.architecture-slide,
+.workflow-slide,
+.schema-slide,
+.code-slide {
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   SLIDE HEADER
+======================================== */
+
+.carousel-slide-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 24px;
+}
+
+.carousel-slide-heading > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--accent-soft);
+    color: var(--accent);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.carousel-slide-heading strong,
+.carousel-slide-heading small {
+    display: block;
+}
+
+.carousel-slide-heading strong {
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.carousel-slide-heading small {
+    margin-top: 2px;
+
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+}
+
+
+/* ========================================
+   ARCHITECTURE
+======================================== */
+
+.architecture-slide {
+    padding: 30px;
+}
+
+.architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.architecture-block {
+    padding: 16px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: var(--surface);
+}
+
+.architecture-block-main {
+    border-color: var(--accent);
+}
+
+.architecture-count {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--accent);
+
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.architecture-block strong,
+.architecture-block small {
+    display: block;
+}
+
+.architecture-block strong {
+    color: var(--text);
+}
+
+.architecture-block small {
+    margin-top: 4px;
+
+    color: var(--text-secondary);
+
+    font-size: 0.75rem;
+    line-height: 1.35;
+}
+
+.architecture-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 20px;
+
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.architecture-flow span {
+    padding: 5px 9px;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    background: var(--surface);
+}
+
+.architecture-flow i {
+    color: var(--accent);
+    font-style: normal;
+}
+
+
+/* ========================================
+   WORKFLOW
+======================================== */
+
+.workflow-slide {
+    padding: 30px;
+}
+
+.workflow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 25px;
+}
+
+.workflow-step {
+    min-width: 110px;
+
+    text-align: center;
+}
+
+.workflow-step strong,
+.workflow-step small {
+    display: block;
+}
+
+.workflow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin: 0 auto 9px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+    color: white;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.workflow-step strong {
+    color: var(--text);
+}
+
+.workflow-step small {
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+}
+
+.workflow-arrow {
+    color: var(--accent);
+    font-size: 1.3rem;
+}
+
+.workflow-secondary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.workflow-secondary > div {
+    padding: 12px 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--surface);
+}
+
+.workflow-secondary strong,
+.workflow-secondary span {
+    display: block;
+}
+
+.workflow-secondary strong {
+    margin-bottom: 3px;
+
+    color: var(--text);
+    font-size: 0.82rem;
+}
+
+.workflow-secondary span {
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+}
+
+
+/* ========================================
+   DOCTRINE SCHEMA
+======================================== */
+
+.schema-slide {
+    padding: 30px;
+}
+
+.doctrine-compact-schema {
+    position: relative;
+
+    width: 100%;
+    height: 285px;
+}
+
+.doctrine-card {
+    position: absolute;
+    z-index: 2;
+
+    width: 140px;
+
+    padding: 9px 11px;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    background: var(--surface);
+
+    text-align: center;
+}
+
+.doctrine-card strong,
+.doctrine-card span,
+.doctrine-card small {
+    display: block;
+}
+
+.doctrine-card strong {
+    color: var(--text);
+    font-size: 0.82rem;
+}
+
+.doctrine-card span {
+    margin-top: 1px;
+
+    color: var(--text-secondary);
+    font-size: 0.64rem;
+}
+
+.doctrine-card small {
+    margin-top: 3px;
+
+    color: var(--accent);
+
+    font-size: 0.58rem;
+    font-weight: 600;
+}
+
+
+/* Event au centre */
+
+.doctrine-event {
+    top: 100px;
+    left: 50%;
+
+    width: 150px;
+
+    transform: translateX(-50%);
+
+    border-color: var(--accent);
+}
+
+.doctrine-event strong {
+    color: var(--accent);
+    font-size: 0.95rem;
+}
+
+
+/* Colonne gauche */
+
+.doctrine-user-participant {
+    top: 0;
+    left: 4%;
+}
+
+.doctrine-place {
+    top: 100px;
+    left: 4%;
+}
+
+.doctrine-state {
+    top: 200px;
+    left: 4%;
+}
+
+
+/* Colonne droite */
+
+.doctrine-organizer {
+    top: 0;
+    right: 4%;
+}
+
+.doctrine-site {
+    top: 100px;
+    right: 4%;
+}
+
+.doctrine-group {
+    top: 200px;
+    right: 4%;
+}
+
+
+/* ScheduledEmail en bas */
+
+.doctrine-email {
+    bottom: 0;
+    left: 50%;
+
+    width: 160px;
+
+    transform: translateX(-50%);
+}
+
+
+/* Lignes du schéma */
+
+.doctrine-links {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+}
+
+.doctrine-link {
+    stroke: var(--border);
+    stroke-width: 2;
+
+    marker-end: url(#doctrine-arrow);
+}
+
+.doctrine-link-double {
+    marker-start: url(#doctrine-arrow-start);
+    marker-end: url(#doctrine-arrow);
+}
+
+.doctrine-links marker path {
+    fill: var(--accent);
+}
+
+
+/* ========================================
+   CODE
+======================================== */
+
+.code-slide {
+    background: #17212b;
+}
+
+.carousel-slide-heading-dark {
+    margin-bottom: 0;
+    padding: 26px 28px 0;
+}
+
+.carousel-slide-heading-dark strong {
+    color: #f0f4f8;
+}
+
+.carousel-slide-heading-dark small {
+    color: #9aa8b5;
+}
+
+.project-code {
+    width: 100%;
+
+    background: #17212b;
+}
+
+.project-code pre {
+    margin: 0;
+    padding: 18px 28px 28px;
+
+    overflow-x: auto;
+}
+
+.project-code code {
+    color: #e6edf3;
+
+    font-family:
+        "JetBrains Mono",
+        "Fira Code",
+        Consolas,
+        monospace;
+
+    font-size: 0.84rem;
+    line-height: 1.65;
+}
+/* ========================================
+   PROJECT SCREENSHOTS
+======================================== */
+
+.project-screenshot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 18px;
+
+    background: var(--surface-alt);
+}
+
+.project-screenshot img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 10px;
+}
+
+
+/* Captures du jeu : on conserve leur format vertical */
+
+.project-screenshot-game {
+    padding: 14px 40px;
+}
+
+.project-screenshot-game img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+}
+
+
+/* Petit effet d'apparition lors du changement de slide */
+
+.project-slide.is-active .project-screenshot img {
+    animation: project-image-in 0.3s ease;
+}
+
+@keyframes project-image-in {
+    from {
+        opacity: 0;
+        transform: scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   CAROUSEL CONTROLS
+======================================== */
+
+.project-carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    margin-top: 14px;
+}
+
+.project-carousel-controls > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: var(--surface);
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-carousel-controls > button:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+
+    transform: translateY(-1px);
+}
+
+.project-carousel-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-carousel-dots button {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: var(--border);
+
+    cursor: pointer;
+}
+
+.project-carousel-dots button.is-active {
+    background: var(--accent);
+}
+
+
+/* ========================================
+   CAROUSEL RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .project-carousel-track {
+        height: auto;
+        min-height: 430px;
+    }
+
+    .project-slide,
+    .architecture-slide,
+    .workflow-slide,
+    .schema-slide,
+    .code-slide {
+        height: auto;
+        min-height: 430px;
+    }
+
+    .architecture-slide,
+    .workflow-slide,
+    .schema-slide {
+        padding: 22px;
+    }
+
+    .architecture-grid,
+    .workflow-secondary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workflow {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+
+        margin-top: 10px;
+    }
+
+    .workflow-arrow {
+        transform: rotate(90deg);
+        text-align: center;
+    }
+
+    /*
+     * Sur mobile, le schéma Doctrine reste compact.
+     * On réduit les cartes plutôt que de les empiler.
+     */
+
+    .doctrine-compact-schema {
+        height: 300px;
+    }
+
+    .doctrine-card {
+        width: 105px;
+        padding: 7px;
+    }
+
+    .doctrine-card strong {
+        font-size: 0.7rem;
+    }
+
+    .doctrine-card span,
+    .doctrine-card small {
+        font-size: 0.52rem;
+    }
+
+    .doctrine-event {
+        width: 115px;
+    }
+
+    .doctrine-email {
+        width: 125px;
+    }
+    .project-screenshot {
+        min-height: 430px;
+        padding: 10px;
+    }
+
+    .project-screenshot-game {
+        padding: 12px 20px;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    .architecture-grid,
+    .workflow-secondary {
+        grid-template-columns: 1fr;
+    }
+
+    .project-carousel-track {
+        min-height: 560px;
+    }
+
+    .project-slide,
+    .architecture-slide,
+    .workflow-slide,
+    .schema-slide,
+    .code-slide {
+        min-height: 560px;
+    }
+
+    .doctrine-user-participant,
+    .doctrine-place,
+    .doctrine-state {
+        left: 0;
+    }
+
+    .doctrine-organizer,
+    .doctrine-site,
+    .doctrine-group {
+        right: 0;
+    }
+
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .architecture-grid,
+    .schema-relations,
+    .workflow-secondary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workflow {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .workflow-arrow {
+        transform: rotate(90deg);
+
+        text-align: center;
+    }
+
+
+
+    .project-carousel-track,
+    .project-slide,
+    .architecture-slide,
+    .workflow-slide,
+    .schema-slide,
+    .code-slide {
+        min-height: 0;
+    }
+}
+.schema-slide {
+    min-height: 360px;
+    padding: 22px;
+}
+
+.doctrine-compact-schema {
+    height: 260px;
+}
+
+.doctrine-card {
+    width: 120px;
+
+    padding: 8px 9px;
+}
+
+.doctrine-card strong {
+    font-size: 0.78rem;
+}
+
+.doctrine-card span,
+.doctrine-card small {
+    font-size: 0.58rem;
+}
+
+.doctrine-event {
+    width: 130px;
+}
+
+
+@media (max-width: 480px) {
+
+    .architecture-grid,
+    .schema-relations,
+    .workflow-secondary {
+        grid-template-columns: 1fr;
+    }
+
+    .architecture-slide,
+    .workflow-slide,
+    .schema-slide {
+        padding: 22px;
+    }
+}
+
+
+.doctrine-relations-grid {
+    grid-template-columns: 1fr;
+}
 
 
 /* RESPONSIVE */
@@ -707,3 +1525,5 @@ h3 {
         font-size: 0.58em;
     }
 }
+
+
