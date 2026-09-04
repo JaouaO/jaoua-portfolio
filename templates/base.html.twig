@@ -13,6 +13,10 @@
 
 <body>
 
+<a class="skip-link" href="#main-content">
+    Passer la navigation
+</a>
+
 <header class="site-header">
     <div class="container header-inner">
 
@@ -31,7 +35,7 @@
     </div>
 </header>
 
-<main>
+<main id="main-content" tabindex="-1">
     {% block body %}{% endblock %}
 </main>
 

@@ -1,7 +1,7 @@
 :root {
     --background: #edf3f7;
     --surface: #f8fbfd;
-    --surface-alt: #e4edf3;
+    --surface-alt: #dfe8ee;
 
     --text: #17212b;
     --text-secondary: #5d6975;
@@ -54,6 +54,49 @@ img {
     margin-inline: auto;
 }
 
+
+.skip-link {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+
+    border: 0;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    position: fixed;
+
+    top: 10px;
+    left: 10px;
+    z-index: 10000;
+
+    width: auto;
+    height: auto;
+
+    padding: 10px 14px;
+    margin: 0;
+
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+
+    background: var(--text);
+    color: white;
+
+    border-radius: 8px;
+
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
 
 /* HEADER */
 
@@ -314,15 +357,9 @@ h3 {
     border: 1px solid var(--border);
     border-radius: var(--radius);
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-
     border-color: #b5c4d0;
 
     box-shadow:
@@ -1316,89 +1353,6 @@ h3 {
 /* ========================================
    RESPONSIVE
 ======================================== */
-
-@media (max-width: 700px) {
-
-    .architecture-grid,
-    .schema-relations,
-    .workflow-secondary {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .workflow {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .workflow-arrow {
-        transform: rotate(90deg);
-
-        text-align: center;
-    }
-
-
-
-    .project-carousel-track,
-    .project-slide,
-    .architecture-slide,
-    .workflow-slide,
-    .schema-slide,
-    .code-slide {
-        min-height: 0;
-    }
-}
-.schema-slide {
-    min-height: 360px;
-    padding: 22px;
-}
-
-.doctrine-compact-schema {
-    height: 260px;
-}
-
-.doctrine-card {
-    width: 120px;
-
-    padding: 8px 9px;
-}
-
-.doctrine-card strong {
-    font-size: 0.78rem;
-}
-
-.doctrine-card span,
-.doctrine-card small {
-    font-size: 0.58rem;
-}
-
-.doctrine-event {
-    width: 130px;
-}
-
-
-@media (max-width: 480px) {
-
-    .architecture-grid,
-    .schema-relations,
-    .workflow-secondary {
-        grid-template-columns: 1fr;
-    }
-
-    .architecture-slide,
-    .workflow-slide,
-    .schema-slide {
-        padding: 22px;
-    }
-}
-
-
-.doctrine-relations-grid {
-    grid-template-columns: 1fr;
-}
-
-
-/* RESPONSIVE */
 
 @media (max-width: 900px) {
 
